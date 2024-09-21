@@ -4,7 +4,14 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import Logo from '../../assets/logo.jpg'
 import LoginForm from '../../components/loginForm'
 import CustomButton from '../../components/CustomButton'
-import { Link } from 'expo-router'
+import { Link, router } from 'expo-router'
+
+const mockUser = {
+  username: 'joec12',
+  password: '1234'
+
+}
+
 const SignIn = () => {
   const [form, setForm] = useState({
     username: '',
@@ -15,6 +22,11 @@ const SignIn = () => {
 
   const submit = () => {
 
+    if(
+      form.username === mockUser.username && form.password === mockUser.password
+     ) {
+      router.push('/dashboard')
+     }
 
   }
 
@@ -46,10 +58,6 @@ const SignIn = () => {
           isLoading={isSubmitting}
           style={styles.button}
         />
-        <View style={styles.noAccount}>
-         
-          <Link href="/sign-up" style={styles.textNoAccount}>Create Account</Link>
-        </View>
       </View>
     </SafeAreaView>
   )
