@@ -38,16 +38,18 @@ const styles = StyleSheet.create ({
     userForm: {
         padding: 10,
         textAlign: 'center',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        
 
     },
     inputBox: {
         borderWidth: 2,
         width: 222,
         height: 50,
-        backgroundColor: '#ede2dd',
+        backgroundColor: '#cae4e6',
         borderRadius: 10,
-        flexDirection: 'row'
+        flexDirection: 'row',
+      
     },
     input: {
         flex: 1,
@@ -57,7 +59,8 @@ const styles = StyleSheet.create ({
     },
     eye: {
         marginTop: 10,
-        marginRight: 6,
+        marginRight: 5,
+        margin: -22
 
     }
 })

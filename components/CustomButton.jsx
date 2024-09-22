@@ -20,12 +20,12 @@ export default CustomButton
 
 const styles = StyleSheet.create({
     button: {
-        backgroundColor: 'brown',
+        backgroundColor: '#0c9cd4',
         justifyContent: 'center',
         alignItems: 'center',
         padding: 5,
         marginTop: 69,
-        width: 111,
+        width: 133,
         height: 44,
         borderRadius: 10
     },

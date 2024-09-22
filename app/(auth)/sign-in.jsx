@@ -1,15 +1,15 @@
 import { View, Text, StyleSheet, Image } from 'react-native'
 import {useState}  from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import Logo from '../../assets/logo.jpg'
+import Logo from '../../assets/logo.png'
 import LoginForm from '../../components/loginForm'
 import CustomButton from '../../components/CustomButton'
 import { Link, router } from 'expo-router'
 
 const mockUser = {
   username: 'joec12',
-  password: '1234'
-
+  password: '1234',
+  name: 'Joe'
 }
 
 const SignIn = () => {
@@ -21,12 +21,17 @@ const SignIn = () => {
   const [isSubmitting, setisSubmitting] = useState(false)
 
   const submit = () => {
+    mockUser.map((user) => {
+      if(
+        form.username === user.username && form.password === user.password
+       ) {
+        <Link    href={{
+          pathname: '/dashboard',
+          params: { name: user.name }
+        }}></Link>
+       }
+    })
 
-    if(
-      form.username === mockUser.username && form.password === mockUser.password
-     ) {
-      router.push('/dashboard')
-     }
 
   }
 
@@ -52,12 +57,15 @@ const SignIn = () => {
           handleChangeText={(e) => setForm({...form, password: e})}
           
         />
-        <CustomButton
+        <View style={styles.button}>      
+          <CustomButton
           handlePress={submit}
           title="Sign In"
           isLoading={isSubmitting}
           style={styles.button}
-        />
+          
+        /></View>
+
       </View>
     </SafeAreaView>
   )
@@ -84,15 +92,9 @@ text: {
   marginTop: 25,
   fontWeight: 'bold',
 },
-noAccount: {
-  
-  flexDirection: 'row'
-},
-textNoAccount: {
-  marginTop: 33,
-  fontSize: 18
-},
-
+ button: {
+  marginLeft: 44
+ }
 
 
 
