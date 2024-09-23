@@ -1,9 +1,9 @@
-import { View, Text, StyleSheet, Image, Button } from "react-native";
+import { View, Text, StyleSheet, Image } from "react-native";
 import { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Logo from "../../assets/logo.png";
 import LoginForm from "../../components/loginForm";
-// import { CustomButton } from "../components/CustomButton";
+import CustomButton from "../../components/CustomButton";
 import { Link, router } from "expo-router";
 
 const mockUser = {
@@ -48,7 +48,7 @@ const SignIn = () => {
           handleChangeText={(e) => setForm({ ...form, password: e })}
         />
         <View style={styles.button}>
-          <Button
+          <CustomButton
             handlePress={submit}
             title="Sign In"
             isLoading={isSubmitting}

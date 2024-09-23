@@ -1,7 +1,7 @@
-import { View, Text, StyleSheet, ScrollView, Button } from "react-native";
+import { View, Text, StyleSheet, ScrollView } from "react-native";
 import { React, useState, useEffect } from "react";
 import ClassForm from "../../components/classForm";
-// import { CustomButton } from "../../components/CustomButton";
+import CustomButton from "../../components/CustomButton";
 import { router } from "expo-router";
 
 const addClass = () => {
@@ -110,7 +110,7 @@ const addClass = () => {
         </View>
       </ScrollView>
       <View style={styles.button}>
-        <Button title={"Submit Form"} handlePress={handleSubmit} />
+        <CustomButton title={"Submit Form"} handlePress={handleSubmit} />
       </View>
     </>
   );

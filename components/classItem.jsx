@@ -13,7 +13,7 @@ const classItem = ({ className, handlePress }) => {
   );
 };
 
-export default CustomButton;
+export default classItem;
 
 const styles = StyleSheet.create({
   button: {

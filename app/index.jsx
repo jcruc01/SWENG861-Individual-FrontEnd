@@ -1,16 +1,9 @@
 import { StatusBar } from "expo-status-bar";
-import {
-  ScrollView,
-  StyleSheet,
-  Text,
-  View,
-  Image,
-  Button,
-} from "react-native";
+import { ScrollView, StyleSheet, Text, View, Image } from "react-native";
 import { Redirect, router } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Logo from "../assets/logo.png";
-// import { CustomButton } from "../components/CustomButton";
+import CustomButton from "../components/CustomButton";
 
 export default function App() {
   return (
@@ -18,7 +11,7 @@ export default function App() {
       <ScrollView contentContainerStyle={{ height: "100%" }}>
         <View style={styles.mainView}>
           <Image source={Logo} style={styles.image} />
-          <Button
+          <CustomButton
             title="Enter App"
             handlePress={() => router.push("/sign-in")}
           />
