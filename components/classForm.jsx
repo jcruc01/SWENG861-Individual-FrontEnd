@@ -25,6 +25,7 @@ const classForm = ({
         <TextInput
           style={[styles.input, { height: inputHeight }]}
           multiline
+          placeholder={placeholder}
           onChangeText={handleChangeText}
           onContentSizeChange={(event) =>
             setInputHeight(event.nativeEvent.contentSize.height)
@@ -50,11 +51,10 @@ const styles = StyleSheet.create({
     padding: 1,
     backgroundColor: "#cae4e6",
     borderRadius: 10,
-    flexDirection: "row",
+
     multiline: true,
   },
   input: {
-    flex: 1,
     color: "black",
     marginLeft: 6,
     fontSize: 17,

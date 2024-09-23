@@ -75,7 +75,7 @@ const Dashboard = () => {
       backgroundColor: "#0c9cd4",
       borderBottomLeftRadius: 20,
       borderBottomRightRadius: 20,
-      marginTop: 44,
+      marginTop: 24,
     },
     headerTitle: {
       fontSize: 24,
@@ -101,15 +101,6 @@ const Dashboard = () => {
       backgroundColor: "light-gray",
       borderRadius: 10,
       marginVertical: 10,
-      elevation: 1,
-
-      shadowColor: "#000000",
-      shadowOffset: {
-        width: 1,
-        height: 3,
-      },
-      shadowRadius: 2,
-      shadowOpacity: 1.0,
     },
     featureName: {
       marginTop: 10,

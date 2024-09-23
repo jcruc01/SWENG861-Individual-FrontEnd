@@ -40,20 +40,6 @@ const TabsLayout = () => {
             ),
           }}
         />
-        <Tabs.Screen
-          name="profile"
-          options={{
-            title: "Profile",
-            headerShown: false,
-            tabBarIcon: ({ color, size }) => (
-              <MaterialCommunityIcons
-                name="face-man-profile"
-                size={24}
-                color={color}
-              />
-            ),
-          }}
-        />
       </Tabs>
     </>
   );
